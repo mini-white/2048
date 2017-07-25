@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a
+{
+    text-decoration: none;
+}
+span,a,p
+{
+    font-size: 40px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+}
+.big_box{
+    margin: 100px auto;
+    width: 657px;
+    height: 550px;
+    background-color: rgb(255,208,150);
+    border-radius: 10px;
+    position: relative;
+}
+.grade{
+    width: 480px;
+    height: 60px;
+    margin: 0 auto;
+    line-height: 60px;
+}
+.grade span
+{
+    margin-right: 50px;
+}
+.box
+{
+    height:480px;
+    width: 480px;
+    background-color: rgb(193,180,162);
+    border-radius: 10px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.small_box
+{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    background-color:rgba(0,0,0,0.1);
+    border-radius: 10px;
+    float: left;
+    margin: 16px 0 0 16px;
+    text-align: center;
+    line-height: 100px;
+}
+
+
+.div2
+{
+    background-color:rgb(247,231,223) ;
+    font-size: 90px;
+    color: rgb(119,106,98);
+}
+.div4
+{
+    background-color:rgb(241,231,200) ;
+    font-size: 90px;
+    color: rgb(119,106,98);
+}
+.div8
+{
+    background-color:rgb(247,181,115) ;
+    font-size: 90px;
+    color: white;
+}
+.div16
+{
+    background-color:rgb(247,181,115) ;
+    font-size: 80px;
+    color: white;
+}
+.div32
+{
+    background-color:rgb(247,181,115) ;
+    font-size: 80px;
+    color: white;
+}
+.div64
+{
+    background-color:rgb(247,181,115) ;
+    font-size: 80px;
+    color: white;
+}
+.div128
+{
+    background-color:rgb(247,181,115) ;
+    font-size: 65px;
+    color: white;
+}
+.div256
+{
+    background-color:rgb(247,181,115) ;
+    font-size: 65px;
+    color: white;
+}
+.div512
+{
+    background-color:rgb(247,181,115) ;
+    font-size: 65px;
+    color: white;
+}
+.div1024
+{
+    background-color:rgb(247,181,115) ;
+    font-size: 45px;
+    color: white;
+}
+.div2024
+{
+    background-color:rgb(247,181,115) ;
+    font-size: 45px;
+    color: white;
+}
+.shadow
+{
+    position: absolute;
+    width: 657px;
+    height: 550px;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.endWindow
+{
+    height: 200px;
+    width: 300px;
+    opacity: 1;
+    opacity: 1;
+    background-color: white;
+    border: 2px solid rgb(252,225,96);
+    border-radius: 10px;
+    position: relative;
+    margin: 150px auto;
+    text-align: center;
+}
+.endWindow p
+{
+    text-align: center;
+}
+.endWindow a
+{
+    background-color: rgb(165,143,119);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    position: relative;
+}

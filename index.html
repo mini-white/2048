@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link type="text/css" rel="stylesheet" href="css/2048.css">
+	</head>
+	<body>
+		<div class="big_box">
+			<div id="grade" class="grade">
+				<span class="score" id="score">Score:0</span>
+				<span class="top" id="top">Top:0</span>
+			</div>
+			<div class="box" id="box">
+				<div></div><div></div><div></div><div></div>
+				<div></div><div></div><div></div><div></div>
+				<div></div><div></div><div></div><div></div>
+				<div></div><div></div><div></div><div></div>
+			</div>
+			<div id="shadow" class="shadow">
+				<div id="endWindow" class="endWindow">
+					<p>
+						Game Over!<br/>
+						Score:452
+					</p>
+					<a id="again" href="javascript:;">Try again!</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/2048.js"></script>
+<script>
+	function $(id)
+	{
+		return document.getElementById(id);
+	}
+
+	var box=$("box");
+	var shadow=$("shadow");
+	var again=$("again");
+
+	var grade=$("grade");
+	var endWindow=$("endWindow");
+	var score= 0;
+	var topScore=0;
+
+	var divs=box.children;
+	var block=new Array();
+	//创建二维数组
+	for(var i=0;i<4;i++)
+	{
+		block[i]=new Array();
+		for(var j=0;j<4;j++)
+		{
+			block[i][j]=divs[j+i*4];
+			style(block[i][j]);
+		}
+	}
+	//开始随机两个小块
+	Begin();
+
+	//触发事件
+	document.onkeydown=function(event)
+	{
+		var event=window.event||event
+		switch (event.keyCode){
+			case 37 ://左键
+				//alert(1);
+				score+=keyLeft();
+				break;
+			case 38 ://上键
+				//alert(2);
+				score+=keyUp();
+				break;
+			case 39 ://右键
+				//alert(3);
+				score+=keyRight();
+				break;
+			case 40 ://下键
+				//alert(4);
+				score+=keyDown();
+				break;
+			default :
+				alert("输入错误按键，请重新输入");
+				break;
+		}
+		grade.children[0].innerHTML="Score:"+score;
+//		alert(topScore);
+		if (score>topScore)
+		{
+			topScore=score;
+			$("top").innerHTML="Top:"+topScore;
+		}
+		if(gameover(block)==true)
+		{
+
+			endWindow.children[0].innerHTML="Game Over!<br/>Score:"+score;
+			shadow.style.display="block";
+		}
+	}
+	again.onclick=function()
+	{
+		shadow.style.display="none";
+		tryAgain(block);
+		score=0;
+		grade.children[0].innerHTML="Score:"+score;
+	}
+</script>
